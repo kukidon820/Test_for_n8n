@@ -1,0 +1,19 @@
+services:
+  my_n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: on-failure
+    ports:
+      - "5678:5678"
+    environment:
+      NODE_ENV: production
+      GENERIC_TIMEZONE: Europe/Minsk
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "false"
+      N8N_COMMUNITY_PACKAGES_ENABLED: "true"
+#      N8N_RUNNERS_ENABLED: "true"
+      N8N_SECURE_COOKIE: "false"
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:

@@ -1,0 +1,4 @@
+.n8n-gitops.yaml
+.env
+__pycache__/
+*.pyc
