@@ -1,6 +1,0 @@
-externalize_code: true
-tags: []
-workflows:
-- name: My workflow
-  active: false
-  tags: []
